@@ -21,16 +21,16 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Catalog"),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              CupertinoPageRoute(
-                  builder: (BuildContext context) => OrderScreen()),
-            );
-          },
-          icon: Icon(Icons.ac_unit),
-        ),
+        // leading: IconButton(
+        //   onPressed: () {
+        //     Navigator.push(
+        //       context,
+        //       CupertinoPageRoute(
+        //           builder: (BuildContext context) => OrderScreen()),
+        //     );
+        //   },
+        //   icon: Icon(Icons.ac_unit),
+        // ),
         actions: [
           IconButton(
             onPressed: () {

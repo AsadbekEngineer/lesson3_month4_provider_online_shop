@@ -19,7 +19,6 @@ class CartController extends ChangeNotifier {
     calculateTotal();
     notifyListeners();
   }
-
   void removeFromCart(String productId) {
     if (_cart.products.containsKey(productId)) {
       if (_cart.products[productId]['amount'] == 1) {
@@ -32,7 +31,6 @@ class CartController extends ChangeNotifier {
       notifyListeners();
     }
   }
-
   void calculateTotal() {
     double total = 0;
     _cart.products.forEach(
@@ -42,13 +40,11 @@ class CartController extends ChangeNotifier {
     );
     _cart.totalPrice = total;
   }
-
   void clearCart() {
     _cart.products.clear();
     _cart.totalPrice = 0;
     notifyListeners();
   }
-
   bool isInCart(String productId) {
     return _cart.products.containsKey(productId);
   }
